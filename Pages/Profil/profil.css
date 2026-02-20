@@ -1,0 +1,395 @@
+/* ========== SECTION PROFIL ========== */
+.profile-section {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #1b3358 0%, #473e66 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h1 {
+  font-size: 3rem;
+  color: #f5d7db;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========== GRID CARDS ========== */
+.profile-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* ========== CARDS ========== */
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.6s;
+}
+
+.profile-card:hover::before {
+  left: 100%;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(189, 131, 184, 0.5);
+  box-shadow: 0 20px 50px rgba(189, 131, 184, 0.3);
+}
+
+/* ========== ICÔNES CARDS (VERSION RENFORCÉE) ========== */
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 2.5rem;
+  animation: float 3s ease-in-out infinite;
+  text-align: center; /* ← Ajouté */
+}
+
+.card-icon i {
+  display: block;
+  line-height: 1; /* ← Ajouté pour éviter les décalages */
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cv-card .card-icon {
+  background: linear-gradient(135deg, #f1916d, #bd83b8);
+  color: white;
+  box-shadow: 0 10px 30px rgba(241, 145, 109, 0.3);
+}
+
+.linkedin-card .card-icon {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 119, 181, 0.3);
+}
+
+.github-card .card-icon {
+  background: linear-gradient(135deg, #333, #666);
+  color: white;
+  box-shadow: 0 10px 30px rgba(51, 51, 51, 0.3);
+}
+
+.profile-card h3 {
+  font-size: 1.8rem;
+  color: #f5d7db;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.profile-card p {
+  color: rgba(245, 215, 219, 0.7);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ========== BUTTONS ========== */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-profile {
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-view {
+  background: linear-gradient(135deg, #bd83b8, #f1916d);
+  color: white;
+  box-shadow: 0 5px 15px rgba(241, 145, 109, 0.3);
+}
+
+.btn-view:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(241, 145, 109, 0.5);
+}
+
+.btn-download {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5d7db;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-download:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #f1916d;
+  transform: scale(1.05);
+}
+
+.btn-linkedin {
+  background: #0077b5;
+  color: white;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3);
+}
+
+.btn-linkedin:hover {
+  background: #00a0dc;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 119, 181, 0.5);
+}
+
+.btn-github {
+  background: #333;
+  color: white;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(51, 51, 51, 0.3);
+}
+
+.btn-github:hover {
+  background: #555;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(51, 51, 51, 0.5);
+}
+
+/* ========== STATS ========== */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1916d;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(245, 215, 219, 0.6);
+  margin-top: 5px;
+}
+
+/* ========== BIO SECTION ========== */
+.bio-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 50px;
+  margin-top: 40px;
+}
+
+.bio-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.bio-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #bd83b8;
+  box-shadow: 0 10px 30px rgba(189, 131, 184, 0.3);
+  object-fit: cover;
+}
+
+.bio-info h2 {
+  font-size: 2.2rem;
+  color: #f5d7db;
+  margin-bottom: 10px;
+}
+
+.bio-title {
+  font-size: 1.2rem;
+  color: #f1916d;
+  font-weight: 500;
+}
+
+.bio-text {
+  margin-bottom: 30px;
+}
+
+.bio-text h3 {
+  font-size: 1.5rem;
+  color: #bd83b8;
+  margin-bottom: 15px;
+}
+
+.bio-text p {
+  color: rgba(245, 215, 219, 0.8);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* ========== QUICK INFO ========== */
+.quick-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #f1916d;
+  width: 30px;
+  text-align: center;
+}
+
+.info-item span {
+  color: rgba(245, 215, 219, 0.9);
+  font-size: 0.95rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-section {
+    padding: 30px 20px;
+  }
+
+  .bio-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .quick-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== FORMES FLOTTANTES ========== */
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(241, 145, 109, 0.1);
+  animation: float 20s infinite ease-in-out;
+}
+
+/* Grande bulle en haut à gauche */
+.shape-1 {
+  width: 350px;
+  height: 350px;
+  top: -10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+/* Bulle moyenne en bas à gauche */
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  left: -5%;
+  background: rgba(189, 131, 184, 0.12);
+  animation-delay: 7s;
+}
+
+/* Grande bulle en haut à droite */
+.shape-3 {
+  width: 280px;
+  height: 280px;
+  top: 15%;
+  right: -8%;
+  background: rgba(245, 215, 219, 0.1);
+  animation-delay: 3s;
+}

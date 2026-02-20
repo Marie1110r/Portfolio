@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Profil - Portfolio</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="profil.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="/index.html" class="logo">Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="/index.html#accueil">Accueil</a></li>
+        <li><a href="/Pages/Projets/projets.html">Projets</a></li>
+        <li><a href="/Pages/Contact/contact.html">Contact</a></li>
+        <li><a href="profil.html" class="active">Profil</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section Profil -->
+    <section class="profile-section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Mon profil</h1>
+        </div
+
+        <!-- Cartes principales -->
+        <div class="profile-content">
+          <!-- CV Card -->
+          <div class="profile-card">
+            <div
+              class="card-icon"
+              style="background: linear-gradient(135deg, #f1916d, #bd83b8)"
+            >
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>Mon CV</h3>
+            <p>Découvrir mon parcours</p>
+
+            <!-- Boutons existants -->
+            <div class="profile-actions" D>
+              <a
+                href="/Documents/CV Marie_RICHARD.pdf"
+                class="btn-profile btn-view"
+                target="_blank"
+              >
+                <i class="fas fa-eye"></i> Voir le CV
+              </a>
+              <a
+                href="/Documents/CV Marie_RICHARD.pdf"
+                class="btn-profile btn-download"
+                download
+              >
+                <i class="fas fa-download"></i> Télécharger
+              </a>
+            </div>
+
+            <div class="stats"></div>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <div class="profile-card linkedin-card">
+            <div class="card-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Connectons-nous professionnellement</p>
+            <a
+              href="https://www.linkedin.com/in/marie-richard112006/"
+              class="btn-profile btn-linkedin"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i> Voir le profil
+            </a>
+            <div class="stats"></div>
+          </div>
+
+          <!-- GitHub Card -->
+          <div class="profile-card github-card">
+            <div class="card-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <h3>GitHub</h3>
+            <p>Explorez mes projets</p>
+            <a
+              href="https://github.com/Marie1110r?tab=projects"
+              class="btn-profile btn-github"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i> Voir le profil
+            </a>
+            <div class="stats"></div>
+          </div>
+        </div>
+
+        <!-- Section Bio -->
+        <div class="bio-section">
+          <div class="bio-content">
+            <div class="bio-header">
+              <img
+                src="/Images/Photo_CV.png"
+                alt="Photo de profil"
+                class="bio-photo"
+              />
+              <div class="bio-info">
+                <h2>Marie RICHARD</h2>
+                <p class="bio-title">Etudiante | BTS CIEL</p>
+              </div>
+            </div>
+
+            <div class="bio-text">
+              <h3>À propos de moi</h3>
+              <p>...</p>
+            </div>
+
+            <div class="quick-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Paris, France</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>marie251richard@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Diplôme BTS CIEL</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-briefcase"></i>
+                <span>2 ans d'expérience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Formes décoratives -->
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
