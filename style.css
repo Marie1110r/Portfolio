@@ -173,8 +173,10 @@ nav {
   font-weight: bold;
   color: var(--color-light);
   text-align: center;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ombre plus légère */
   padding: 10px;
+  opacity: 0.3; /* AJOUTE CECI : le texte sera à 30% d'opacité par défaut */
+  transition: opacity 0.3s ease; /* Pour une transition douce au survol */
 }
 
 /* ========== CONTENU HERO ========== */
