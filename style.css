@@ -122,16 +122,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(189, 131, 184, 0.15);
-  backdrop-filter: blur(5px);
-  border: 2px solid rgba(245, 215, 219, 0.3);
-  box-shadow: 0 8px 32px rgba(189, 131, 184, 0.2),
-    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  background: rgba(189, 131, 184, 0.02); 
+  backdrop-filter: blur(3px);
+  border: 0.5px solid rgba(245, 215, 219, 0.05);
+  box-shadow: none;
+  
   animation: float var(--duration) ease-in-out infinite var(--delay);
   left: var(--position-x);
   top: var(--position-y);
   transform: translate(-50%, -50%);
 }
+
 
 /* Animation de flottement */
 @keyframes float {
@@ -158,13 +159,15 @@ nav {
 }
 
 .bubble-lang:hover {
-  background: rgba(189, 131, 184, 0.3);
+  background: rgba(189, 131, 184, 0.2); 
   border-color: var(--color-accent);
-  box-shadow: 0 12px 40px rgba(189, 131, 184, 0.5),
-    inset 0 0 30px rgba(255, 255, 255, 0.2);
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+
+.bubble-lang:hover .lang-icon {
+  opacity: 1;
+}
 .lang-icon {
   font-size: calc(var(--size) * 0.2);
   font-weight: bold;
